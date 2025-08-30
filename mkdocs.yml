@@ -1,0 +1,11 @@
+site_name: WikiForum - 维方
+theme:
+  name: material
+  palette:
+    primary: "blue"
+    accent: "light blue"
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - search.suggest
+    - search.highlight
