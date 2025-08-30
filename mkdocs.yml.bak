@@ -1,13 +1,37 @@
-# mkdocs.yml 核心配置
-site_name: 我的项目文档  # 你的文档网站名称（必填）
+site_name: WikiForum - 维方
+
 theme:
-  name: material  # 【指定启用 Material 主题】
-  # （可选）添加主题个性化配置，如颜色、字体等
+  name: material
+  # 添加调色板配置以支持日夜间模式切换
   palette:
-    primary: "blue"  # 主色调（可选值：red/indigo/purple/green 等）
-    accent: "light blue"  # 强调色
+    # 第一个调色板 - 浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到深色模式
+    # 第二个调色板 - 深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: 切换到浅色模式
+  
+  # 启用调色板切换功能
   features:
-    - navigation.tabs  # 启用顶部标签导航
-    - navigation.sections  # 启用侧边栏章节折叠
-    - search.suggest  # 搜索建议
-    - search.highlight  # 搜索结果高亮
+    - navigation.tabs
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    # 添加调色板切换功能
+    - navigation.top
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    # 这是关键 - 启用调色板切换
+    - palette.scheme
+    - palette.toggle
