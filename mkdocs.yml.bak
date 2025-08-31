@@ -2,9 +2,7 @@ site_name: WikiForum - 维方
 
 theme:
   name: material
-  # 添加调色板配置以支持日夜间模式切换
   palette:
-    # 第一个调色板 - 浅色模式
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: blue
@@ -12,7 +10,6 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: 切换到深色模式
-    # 第二个调色板 - 深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: blue
@@ -20,18 +17,14 @@ theme:
       toggle:
         icon: material/weather-night
         name: 切换到浅色模式
-  
-  # 启用调色板切换功能
   features:
     - navigation.tabs
     - navigation.sections
     - search.suggest
     - search.highlight
-    # 添加调色板切换功能
     - navigation.top
     - content.tabs.link
     - content.code.annotate
     - content.code.copy
-    # 这是关键 - 启用调色板切换
     - palette.scheme
     - palette.toggle
